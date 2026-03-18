@@ -3,28 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gaurav Web Services | Premium Local Websites</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Gaurav Edits | Professional Video Editing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
-        /* CSS Variables - Old Money Luxury Palette */
+        /* CSS Variables - Moody Dark Cream / Taupe Palette (ZERO White) */
         :root {
-            --bg-base: #0A0A0A; /* Deepest black */
-            --text-main: #EAE6DF; /* Warm off-white */
-            --text-muted: #A39B8F;
-            --gold-accent: #D4AF37; /* Rich Gold */
-            --gold-glow: rgba(212, 175, 55, 0.3);
+            --bg-main: #AFA596; /* Dark cream / Putty */
+            --bg-card: #BDB4A5; /* Slightly lighter dark cream for cards */
+            --bg-card-hover: #C5BDB0; /* Gentle highlight for hover */
+            --text-dark: #2C2825; /* Deep espresso/charcoal for readability */
+            --text-muted: #5E564E; /* Medium taupe for subtitles */
+            --accent-color: #8A5A46; /* Deep muted clay/terracotta */
+            --accent-glow: rgba(138, 90, 70, 0.3);
             
-            /* Old Money Jewel Tones (Very Dark) */
-            --jewel-slate: linear-gradient(145deg, #1A1A1C, #0F0F11);
-            --jewel-blue: linear-gradient(145deg, #0C162D, #060B17);
-            --jewel-red: linear-gradient(145deg, #2D1115, #17080B);
-            --jewel-green: linear-gradient(145deg, #0D2118, #06110C);
-            --jewel-brown: linear-gradient(145deg, #2A1A14, #150D0A);
+            /* Highlight Card (Pro Plan) */
+            --pro-bg: #2C2825;
+            --pro-text: #BDB4A5;
+            --pro-muted: #938A7E;
 
             --font-heading: 'Playfair Display', serif;
             --font-body: 'Plus Jakarta Sans', sans-serif;
-            --transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
 
         /* Reset & Base Styles */
@@ -36,8 +36,8 @@
         }
 
         body {
-            background-color: var(--bg-base);
-            color: var(--text-main);
+            background-color: var(--bg-main);
+            color: var(--text-dark);
             font-family: var(--font-body);
             line-height: 1.6;
             overflow-x: hidden;
@@ -45,14 +45,13 @@
 
         h1, h2, h3, h4 {
             font-family: var(--font-heading);
-            font-weight: 600;
-            letter-spacing: 0.5px;
+            font-weight: 700;
         }
 
-        /* Animations */
+        /* Scroll Animations */
         .reveal {
             opacity: 0;
-            transform: translateY(40px);
+            transform: translateY(30px);
             transition: 0.8s all ease-out;
         }
         .reveal.active {
@@ -65,25 +64,24 @@
             position: fixed;
             top: 0;
             width: 100%;
-            padding: 20px 5%;
+            padding: 15px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: rgba(10, 10, 10, 0.65);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+            /* Matches the dark cream background with a blur */
+            background: rgba(175, 165, 150, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(44, 40, 37, 0.1);
             z-index: 1000;
         }
 
         .logo {
             font-family: var(--font-heading);
             font-size: 1.5rem;
-            color: var(--gold-accent);
+            color: var(--text-dark);
             text-decoration: none;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+            letter-spacing: 0.5px;
         }
 
         .nav-links {
@@ -92,760 +90,542 @@
         }
 
         .nav-links a {
-            color: var(--text-main);
+            color: var(--text-dark);
             text-decoration: none;
             font-size: 0.9rem;
-            font-weight: 500;
+            font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;
             transition: var(--transition);
         }
 
         .nav-links a:hover {
-            color: var(--gold-accent);
-            text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+            color: var(--accent-color);
         }
 
         /* Buttons */
         .btn {
             display: inline-block;
-            padding: 14px 35px;
-            background-color: var(--gold-accent);
-            color: var(--bg-base);
+            padding: 12px 30px;
+            background-color: var(--text-dark);
+            color: var(--bg-main);
             text-decoration: none;
             font-weight: 600;
             font-size: 0.95rem;
-            border-radius: 4px;
+            border-radius: 6px;
             transition: var(--transition);
-            border: 1px solid var(--gold-accent);
+            border: 2px solid var(--text-dark);
             cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 1px;
         }
 
         .btn:hover {
             background-color: transparent;
-            color: var(--gold-accent);
-            box-shadow: 0 0 25px var(--gold-glow);
+            color: var(--text-dark);
+            box-shadow: 0 8px 20px rgba(44, 40, 37, 0.15);
         }
 
-        .btn-outline {
-            background-color: transparent;
-            color: var(--text-main);
-            border: 1px solid rgba(255,255,255,0.2);
+        .btn-accent {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+            color: var(--bg-main);
         }
         
-        .btn-outline:hover {
-            border-color: var(--gold-accent);
-            color: var(--gold-accent);
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
+        .btn-accent:hover {
+            background-color: transparent;
+            color: var(--accent-color);
+            box-shadow: 0 8px 20px var(--accent-glow);
         }
 
         /* Hero Section */
         #hero {
-            min-height: 100vh;
+            min-height: 90vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 140px 5% 60px;
-            background: radial-gradient(circle at center top, #1A1A1A 0%, #0A0A0A 80%);
+            padding: 120px 5% 60px;
         }
 
         #hero h1 {
-            font-size: 4.5rem;
-            line-height: 1.1;
-            margin-bottom: 25px;
+            font-size: 4rem;
+            line-height: 1.15;
+            margin-bottom: 20px;
             max-width: 900px;
-            color: #ffffff;
+            color: var(--text-dark);
         }
 
         #hero p {
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             color: var(--text-muted);
             max-width: 650px;
             margin-bottom: 40px;
         }
 
-        /* Conversion Booster Banner */
-        .booster-banner {
-            background: linear-gradient(90deg, #1A0A0A, #1A120A, #1A0A0A);
-            padding: 35px 5%;
-            text-align: center;
-            border-top: 1px solid rgba(212, 175, 55, 0.15);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
-        }
-
-        .booster-banner h3 {
-            font-size: 1.6rem;
-            color: var(--gold-accent);
-            font-style: italic;
-            font-weight: 400;
-        }
-
         /* Sections General */
         section {
-            padding: 110px 5%;
-            max-width: 1400px;
+            padding: 90px 5%;
+            max-width: 1300px;
             margin: 0 auto;
         }
 
         .section-title {
             text-align: center;
             font-size: 2.8rem;
-            color: var(--gold-accent);
-            margin-bottom: 15px;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            color: var(--text-muted);
-            margin-bottom: 70px;
-            font-size: 1.15rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* DEMO / PORTFOLIO SECTION */
-        .demo-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 40px;
-        }
-
-        .demo-card {
-            background: var(--jewel-slate);
-            border-radius: 8px;
-            overflow: hidden;
-            border: 1px solid rgba(255,255,255,0.05);
-            transition: var(--transition);
-        }
-
-        .demo-card:hover {
-            border-color: var(--gold-accent);
-            transform: translateY(-8px);
-            box-shadow: 0 15px 40px var(--gold-glow);
-        }
-
-        .demo-img-wrapper {
-            position: relative;
-            width: 100%;
-            height: 240px;
-            overflow: hidden;
-        }
-
-        .demo-img-wrapper img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-
-        .demo-card:hover .demo-img-wrapper img {
-            transform: scale(1.08);
-            filter: brightness(0.5);
-        }
-
-        .demo-overlay {
-            position: absolute;
-            inset: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: rgba(10, 10, 10, 0.3);
-            backdrop-filter: blur(5px);
-            opacity: 0;
-            transition: var(--transition);
-        }
-
-        .demo-card:hover .demo-overlay {
-            opacity: 1;
-        }
-
-        .demo-info {
-            padding: 25px;
-            text-align: left;
-            border-top: 1px solid rgba(255,255,255,0.05);
-        }
-
-        .demo-info h3 {
-            color: var(--text-main);
-            font-size: 1.3rem;
-            margin-bottom: 5px;
-        }
-
-        .demo-info p {
-            color: var(--gold-accent);
-            font-size: 0.9rem;
-            font-weight: 500;
+            color: var(--text-dark);
+            margin-bottom: 50px;
         }
 
         /* Pricing Grid */
         .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 35px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
             align-items: stretch;
         }
 
         .plan-card {
-            border-radius: 8px;
-            padding: 45px 35px;
-            border: 1px solid rgba(255,255,255,0.04);
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 40px 30px;
+            border: 1px solid rgba(44, 40, 37, 0.05);
             transition: var(--transition);
             position: relative;
             display: flex;
             flex-direction: column;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
         }
 
         .plan-card:hover {
-            transform: translateY(-12px);
-            border-color: var(--gold-accent);
-            box-shadow: 0 15px 40px var(--gold-glow);
+            transform: translateY(-8px);
+            background: var(--bg-card-hover);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            border-color: rgba(44, 40, 37, 0.12);
         }
 
-        /* Old Money Jewel Tones for Cards */
-        .card-basic { background: var(--jewel-slate); }
-        .card-starter { background: var(--jewel-blue); }
-        .card-business { 
-            background: var(--jewel-red); 
-            border: 1px solid var(--gold-accent);
-            transform: scale(1.05);
+        /* Highlighted Pro Plan */
+        .card-pro {
+            background: var(--pro-bg);
+            color: var(--pro-text);
+            border: none;
+            transform: scale(1.03);
             z-index: 2;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
-        .card-pro { background: var(--jewel-green); }
-        .card-premium { background: var(--jewel-brown); }
 
-        .plan-card:hover.card-business {
-            transform: scale(1.05) translateY(-12px);
+        .plan-card:hover.card-pro {
+            transform: scale(1.03) translateY(-8px);
+            background: #231E1C; /* slightly darker on hover */
         }
 
         .badge {
             position: absolute;
-            top: -16px;
+            top: -14px;
             left: 50%;
             transform: translateX(-50%);
-            background: var(--gold-accent);
-            color: var(--bg-base);
-            padding: 6px 18px;
+            background: var(--accent-color);
+            color: var(--bg-main);
+            padding: 6px 16px;
             font-size: 0.8rem;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
-            border-radius: 30px;
-            box-shadow: 0 0 15px var(--gold-glow);
-        }
-
-        .plan-header {
-            border-bottom: 1px solid rgba(255,255,255,0.08);
-            padding-bottom: 25px;
-            margin-bottom: 25px;
+            letter-spacing: 1px;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px var(--accent-glow);
         }
 
         .plan-name {
-            font-size: 1.6rem;
-            margin-bottom: 12px;
-            color: #fff;
+            font-size: 1.4rem;
+            margin-bottom: 8px;
         }
 
         .plan-price {
-            font-size: 2.8rem;
+            font-size: 2.5rem;
             font-family: var(--font-heading);
-            color: var(--gold-accent);
-            margin-bottom: 8px;
-            text-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+            color: var(--accent-color);
+            margin-bottom: 5px;
         }
 
         .plan-desc {
             font-size: 0.9rem;
             color: var(--text-muted);
             min-height: 45px;
+            border-bottom: 1px solid rgba(44, 40, 37, 0.1);
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        .card-pro .plan-desc {
+            color: var(--pro-muted);
+            border-color: rgba(189, 180, 165, 0.1);
         }
 
         .plan-features {
             list-style: none;
-            margin-bottom: 35px;
+            margin-bottom: 30px;
             flex-grow: 1;
         }
 
         .plan-features li {
-            margin-bottom: 14px;
+            margin-bottom: 12px;
             font-size: 0.95rem;
             display: flex;
             align-items: flex-start;
-            color: #D1CCC5;
         }
 
         .plan-features li::before {
             content: '✔';
-            color: var(--gold-accent);
+            color: var(--accent-color);
             margin-right: 12px;
             font-size: 0.9rem;
         }
 
         .plan-footer {
             margin-top: auto;
-            border-top: 1px solid rgba(255,255,255,0.08);
-            padding-top: 25px;
+            border-top: 1px solid rgba(44, 40, 37, 0.1);
+            padding-top: 20px;
             font-size: 0.85rem;
             color: var(--text-muted);
-            line-height: 1.8;
+        }
+        
+        .card-pro .plan-footer {
+            border-color: rgba(189, 180, 165, 0.1);
+            color: var(--pro-muted);
         }
 
-        /* Add-ons & Notes */
-        .addons-container {
-            margin-top: 80px;
-            background: rgba(255,255,255,0.01);
-            border: 1px solid rgba(255,255,255,0.05);
-            padding: 0;
-            border-radius: 8px;
+        /* Information Sections (Add-ons, What you get, etc) */
+        .info-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
-        }
-
-        .addons-list {
-            padding: 50px;
-        }
-
-        .addons-list h3 {
-            color: var(--gold-accent);
-            margin-bottom: 25px;
-            font-size: 1.6rem;
-        }
-
-        .addons-list ul {
-            list-style: none;
-        }
-
-        .addons-list li {
-            display: flex;
-            justify-content: space-between;
-            padding: 12px 0;
-            border-bottom: 1px dashed rgba(255,255,255,0.1);
-            color: var(--text-main);
-            font-size: 0.95rem;
-        }
-
-        .addons-list li span {
-            color: var(--gold-accent);
-            font-weight: 600;
-        }
-
-        .domain-note {
-            background: var(--jewel-brown);
-            padding: 50px;
-            border-left: 1px solid rgba(255,255,255,0.05);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        /* About / Features Grid */
-        .info-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
         }
 
         .info-box {
-            background: rgba(255,255,255,0.015);
-            padding: 45px;
-            border-radius: 8px;
-            border: 1px solid rgba(255,255,255,0.04);
-            transition: var(--transition);
-        }
-        
-        .info-box:hover {
-            border-color: rgba(212, 175, 55, 0.3);
-            transform: translateY(-5px);
+            background: var(--bg-card);
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid rgba(44, 40, 37, 0.05);
         }
 
         .info-box h3 {
-            color: var(--gold-accent);
-            margin-bottom: 25px;
-            font-size: 1.6rem;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
         }
 
-        .info-box ul {
+        .info-list {
             list-style: none;
         }
 
-        .info-box li {
-            margin-bottom: 16px;
+        .info-list li {
+            margin-bottom: 12px;
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            color: #D1CCC5;
+            color: var(--text-dark);
+            border-bottom: 1px dashed rgba(44, 40, 37, 0.15);
+            padding-bottom: 8px;
+        }
+
+        .info-list li span {
+            font-weight: 600;
+            color: var(--accent-color);
         }
         
-        .info-box li::before {
+        .check-list li {
+            justify-content: flex-start;
+            border: none;
+        }
+        
+        .check-list li::before {
             content: '✨';
-            margin-right: 15px;
-            font-size: 1rem;
-            color: var(--gold-accent);
+            margin-right: 12px;
+            font-size: 0.9rem;
         }
 
         /* Contact Section CTA */
         #contact {
             text-align: center;
-            background: radial-gradient(circle at center, #0F1626 0%, #0A0A0A 100%);
-            padding: 140px 5%;
-            border-top: 1px solid rgba(212, 175, 55, 0.1);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+            background: var(--bg-card);
+            padding: 100px 5%;
+            border-radius: 16px;
+            margin-bottom: 60px;
+            border: 1px solid rgba(44, 40, 37, 0.05);
         }
 
         #contact h2 {
-            font-size: 3.5rem;
-            margin-bottom: 25px;
+            font-size: 3rem;
+            margin-bottom: 15px;
         }
 
         #contact p {
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             color: var(--text-muted);
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
 
         .btn-group {
             display: flex;
             justify-content: center;
-            gap: 25px;
+            gap: 20px;
             flex-wrap: wrap;
         }
 
-        /* Premium Footer */
+        /* Premium Footer with Icons */
         footer {
-            background-color: #050505;
+            background-color: var(--text-dark);
+            color: var(--bg-main);
             padding: 60px 5% 40px;
             text-align: center;
-        }
-
-        .footer-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 30px;
-            margin-bottom: 40px;
         }
 
         .footer-logo {
             font-family: var(--font-heading);
             font-size: 1.8rem;
-            color: var(--gold-accent);
-            font-weight: 700;
-            letter-spacing: 2px;
+            color: var(--bg-main);
+            margin-bottom: 30px;
         }
 
-        .footer-links {
+        .social-icons {
             display: flex;
-            gap: 40px;
             justify-content: center;
-            flex-wrap: wrap;
+            gap: 25px;
+            margin-bottom: 30px;
         }
 
-        .footer-links a {
-            color: var(--text-main);
-            text-decoration: none;
-            font-size: 1rem;
-            font-weight: 500;
+        .social-icons a {
             display: flex;
             align-items: center;
-            gap: 10px;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: rgba(175, 165, 150, 0.15);
+            border-radius: 50%;
+            color: var(--bg-main);
             transition: var(--transition);
-            border-bottom: 1px solid transparent;
-            padding-bottom: 2px;
         }
 
-        .footer-links a:hover {
-            color: var(--gold-accent);
-            border-color: var(--gold-accent);
+        .social-icons a:hover {
+            background: var(--accent-color);
+            transform: translateY(-5px);
         }
-        
-        /* Using Unicode symbols for clean icons */
-        .icon-ig::before { content: '📸'; }
-        .icon-wa::before { content: '💬'; }
-        .icon-ph::before { content: '📞'; }
+
+        .social-icons svg {
+            width: 22px;
+            height: 22px;
+            fill: currentColor;
+        }
 
         .copyright {
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            border-top: 1px solid rgba(255,255,255,0.05);
-            padding-top: 30px;
+            color: var(--pro-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(175, 165, 150, 0.1);
+            padding-top: 25px;
         }
 
         /* Mobile Adjustments */
-        @media (max-width: 1024px) {
-            .card-business { transform: scale(1); }
-            .plan-card:hover.card-business { transform: translateY(-12px); }
-            .addons-container { grid-template-columns: 1fr; }
-            .domain-note { border-left: none; border-top: 1px solid rgba(255,255,255,0.05); }
+        @media (max-width: 900px) {
+            .card-pro { transform: scale(1); }
+            .plan-card:hover.card-pro { transform: translateY(-8px); }
         }
 
         @media (max-width: 768px) {
-            .nav-links { display: none; } /* Kept simple for mobile, can add hamburger menu later */
+            .nav-links { display: none; }
             #hero h1 { font-size: 2.8rem; }
             .section-title { font-size: 2.2rem; }
             .btn-group { flex-direction: column; width: 100%; max-width: 300px; margin: 0 auto; }
-            .footer-links { flex-direction: column; gap: 20px; align-items: center; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <a href="#" class="logo">GAURAV WEB SERVICES</a>
+        <a href="#" class="logo">GAURAV EDITS</a>
         <nav class="nav-links">
             <a href="#hero">Home</a>
-            <a href="#about">About</a>
             <a href="#pricing">Pricing</a>
-            <a href="#demos">My Work</a>
+            <a href="#info">Services</a>
             <a href="#contact">Contact</a>
         </nav>
-        <a href="#contact" class="btn" style="padding: 10px 24px; font-size: 0.8rem;">Let's Talk</a>
+        <a href="guide.html" class="btn btn-accent">Get Started</a>
+
+<script>
+    // Clear progress when starting over at the home page
+    localStorage.removeItem("gauravVisitedGuide");
+    localStorage.removeItem("gauravEditsAgreed");
+</script>
     </header>
 
     <section id="hero">
-        <h1 class="reveal">Simple & Affordable Websites for Local Businesses</h1>
-        <p class="reveal">Get your business online with a clean, fast, and mobile-friendly website. No monthly fees. One-time payment. Built for real customers.</p>
+        <h1 class="reveal">Clean & Engaging Video Edits for Social Media</h1>
+        <p class="reveal">Reels, promos, and short videos edited to grab attention, engage your audience, and grow your business online.</p>
         <div class="btn-group reveal">
-            <a href="#pricing" class="btn">View Investment Plans</a>
-            <a href="#demos" class="btn btn-outline">See My Work</a>
-        </div>
-    </section>
-
-    <div class="booster-banner reveal">
-        <h3>“Big companies charge ₹3000–₹5000 for websites. I provide the same premium quality for local businesses at affordable prices.”</h3>
-    </div>
-
-    <section id="demos">
-        <h2 class="section-title reveal">Recent Client Projects</h2>
-        <p class="section-subtitle reveal">Take a look at some of the premium, custom websites I have crafted recently for local businesses.</p>
-        
-        <div class="demo-grid">
-            <div class="demo-card reveal">
-                <div class="demo-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Bakery Demo">
-                    <div class="demo-overlay">
-                        <a href="https://kpgauravpattil-commits.github.io/NationalBakery/" class="btn btn-outline" style="background: rgba(0,0,0,0.6);">View Live Demo</a>
-                    </div>
-                </div>
-                <div class="demo-info">
-                    <h3>New National Bakery</h3>
-                    <p>Premium Aesthetic Theme</p>
-                </div>
-            </div>
-
-            <div class="demo-card reveal">
-                <div class="demo-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Restaurant Demo">
-                    <div class="demo-overlay">
-                        <a href="https://kpgauravpattil-commits.github.io/HotalAF/" class="btn btn-outline" style="background: rgba(0,0,0,0.6);">View Live Demo</a>
-                    </div>
-                </div>
-                <div class="demo-info">
-                    <h3>Hotel Abhiruchi</h3>
-                    <p>Dark & Moody Restaurant Theme</p>
-                </div>
-            </div>
-
-            <div class="demo-card reveal">
-                <div class="demo-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1498049794561-7780e7231661?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Electronics Demo">
-                    <div class="demo-overlay">
-                        <a href="https://kpgauravpattil-commits.github.io/SapnaElec/" class="btn btn-outline" style="background: rgba(0,0,0,0.6);">View Live Demo</a>
-                    </div>
-                </div>
-                <div class="demo-info">
-                    <h3>Sapna Electronics</h3>
-                    <p>Modern Slate Tech Layout</p>
-                </div>
-            </div>
+            <a href="#pricing" class="btn btn-accent">View Packages</a>
+            <a href="#contact" class="btn">Send Clips</a>
         </div>
     </section>
 
     <section id="pricing">
-        <h2 class="section-title reveal">Investment Plans</h2>
-        <p class="section-subtitle reveal">Transparent pricing with zero hidden monthly fees.</p>
+        <h2 class="section-title reveal">Editing Packages</h2>
         
         <div class="pricing-grid">
-            <div class="plan-card card-basic reveal">
-                <div class="plan-header">
-                    <h3 class="plan-name">⚪ Basic Plan</h3>
-                    <div class="plan-price">₹699</div>
-                    <p class="plan-desc">For very small shops just getting started.</p>
-                </div>
+            <div class="plan-card reveal">
+                <h3 class="plan-name">⚪ Basic Edit</h3>
+                <div class="plan-price">₹199</div>
+                <p class="plan-desc">For simple quick edits.<br>Best for: Personal clips, simple reels.</p>
                 <ul class="plan-features">
-                    <li>1 Simple Page Website</li>
-                    <li>Mobile Friendly Design 📱</li>
-                    <li>Click-to-Call Button</li>
-                    <li>Basic Business Info</li>
-                    <li>Google Maps Location</li>
+                    <li>Basic Cutting & Trimming</li>
+                    <li>Simple Transitions</li>
+                    <li>Background Music</li>
+                    <li>Export in HD</li>
                 </ul>
                 <div class="plan-footer">
-                    <strong>Delivery:</strong> 2–3 Days<br>
-                    <strong>Support:</strong> Basic
+                    <strong>Delivery:</strong> 1 Day
                 </div>
             </div>
 
-            <div class="plan-card card-starter reveal">
-                <div class="plan-header">
-                    <h3 class="plan-name">🟢 Starter Plan</h3>
-                    <div class="plan-price">₹799</div>
-                    <p class="plan-desc">Perfect for small local businesses.</p>
-                </div>
+            <div class="plan-card reveal">
+                <h3 class="plan-name">🟢 Starter Edit</h3>
+                <div class="plan-price">₹299</div>
+                <p class="plan-desc">For better looking reels.<br>Best for: Instagram reels, short videos.</p>
                 <ul class="plan-features">
                     <li>Everything in Basic</li>
-                    <li>Better Layout & Clean Design</li>
-                    <li>Contact Section</li>
-                    <li>Smooth Scrolling Sections</li>
-                    <li>Basic Styling Improvements</li>
+                    <li>Text Captions / Titles</li>
+                    <li>Beat Sync (music matching)</li>
+                    <li>Clean Flow Editing</li>
                 </ul>
                 <div class="plan-footer">
-                    <strong>Delivery:</strong> 2 Days<br>
-                    <strong>Support:</strong> Quick Help
-                </div>
-            </div>
-
-            <div class="plan-card card-business reveal">
-                <div class="badge">⭐ Most Popular</div>
-                <div class="plan-header">
-                    <h3 class="plan-name" style="color: var(--gold-accent);">🔵 Business Plan</h3>
-                    <div class="plan-price">₹999</div>
-                    <p class="plan-desc">Best for growing businesses. Highly recommended by shops & hotels.</p>
-                </div>
-                <ul class="plan-features">
-                    <li>Everything in Starter</li>
-                    <li style="color: var(--gold-accent); font-weight: 500;">Premium Design Look ✨</li>
-                    <li>Home, About, Services, Contact</li>
-                    <li>WhatsApp Chat Button 💬</li>
-                    <li>Fast Loading Optimized</li>
-                    <li>Better UI/UX (Professional feel)</li>
-                </ul>
-                <div class="plan-footer">
-                    <strong style="color: var(--gold-accent);">Delivery: 1–2 Days ⚡</strong><br>
-                    <strong>Support:</strong> Priority Support
+                    <strong>Delivery:</strong> 1–2 Days
                 </div>
             </div>
 
             <div class="plan-card card-pro reveal">
-                <div class="plan-header">
-                    <h3 class="plan-name">🟣 Pro Plan</h3>
-                    <div class="plan-price">₹1199</div>
-                    <p class="plan-desc">For businesses that want more features.</p>
-                </div>
+                <div class="badge">⭐ Most Popular</div>
+                <h3 class="plan-name" style="color: var(--accent-color);">🔵 Pro Edit</h3>
+                <div class="plan-price">₹499</div>
+                <p class="plan-desc">Best for business content.<br>Highly recommended for promos.</p>
                 <ul class="plan-features">
-                    <li>Everything in Business</li>
-                    <li>Image Gallery 📸</li>
-                    <li>Reviews / Testimonials Section</li>
-                    <li>Offers / Highlight Section</li>
-                    <li>Advanced Styling (Polished look)</li>
+                    <li>Everything in Starter</li>
+                    <li style="color: var(--accent-color);">Smooth Transitions ✨</li>
+                    <li>Basic Color Correction</li>
+                    <li>Engaging Style (more dynamic)</li>
+                    <li>Social Media Ready Format</li>
                 </ul>
-                <div class="plan-footer">
-                    <strong>Delivery:</strong> 2–3 Days<br>
-                    <strong>Support:</strong> Priority + Minor Changes
+                <div class="plan-footer" style="color: var(--accent-color);">
+                    <strong>Delivery: 1–2 Days ⚡</strong>
                 </div>
             </div>
 
-            <div class="plan-card card-premium reveal">
-                <div class="plan-header">
-                    <h3 class="plan-name">💎 Premium Plan</h3>
-                    <div class="plan-price">₹1499</div>
-                    <p class="plan-desc">For serious businesses that want to stand out.</p>
-                </div>
+            <div class="plan-card reveal">
+                <h3 class="plan-name">🟣 Advanced Edit</h3>
+                <div class="plan-price">₹699</div>
+                <p class="plan-desc">For high-quality content.<br>Best for: High quality reels, branding.</p>
                 <ul class="plan-features">
                     <li>Everything in Pro</li>
-                    <li style="color: var(--gold-accent);">Custom Unique Design 🎨</li>
-                    <li>Fully Personalized Layout</li>
-                    <li>Extra Sections as per need</li>
-                    <li>Best Visual Experience</li>
+                    <li>Advanced Effects</li>
+                    <li>Sound Effects 🔊</li>
+                    <li>Better Color Grading</li>
+                    <li>More detailed editing</li>
                 </ul>
                 <div class="plan-footer">
-                    <strong>Delivery:</strong> 3–4 Days<br>
-                    <strong>Support:</strong> Full Support + Revisions
+                    <strong>Delivery:</strong> 2–3 Days
+                </div>
+            </div>
+
+            <div class="plan-card reveal">
+                <h3 class="plan-name">💎 Premium Edit</h3>
+                <div class="plan-price">₹999</div>
+                <p class="plan-desc">For standout content.<br>Best for: Serious creators & businesses.</p>
+                <ul class="plan-features">
+                    <li>Everything in Advanced</li>
+                    <li style="color: var(--accent-color);">Cinematic Editing 🎬</li>
+                    <li>Custom Style / Theme</li>
+                    <li>High Engagement Edits</li>
+                    <li>Priority Delivery</li>
+                </ul>
+                <div class="plan-footer">
+                    <strong>Delivery:</strong> 2–3 Days
                 </div>
             </div>
         </div>
 
-        <div class="addons-container reveal">
-            <div class="addons-list">
-                <h3>⚙️ Add-Ons (Extra Services)</h3>
-                <ul>
-                    <li>Custom Domain Setup (.com/.in) <span>₹200</span></li>
-                    <li>Website Updates (later changes) <span>₹100</span></li>
-                    <li>Extra Page <span>₹150</span></li>
-                    <li>Image Optimization <span>₹100</span></li>
-                    <li>Logo Basic Design <span>₹150</span></li>
+        <div id="info" class="info-grid reveal">
+            <div class="info-box">
+                <h3>⚙️ Add-Ons</h3>
+                <ul class="info-list">
+                    <li>Subtitles (full captions) <span>₹100</span></li>
+                    <li>Thumbnail (for video/post) <span>₹100</span></li>
+                    <li>Extra revisions <span>₹50</span></li>
+                    <li>Fast Delivery (same day) <span>₹100</span></li>
                 </ul>
             </div>
-            <div class="domain-note">
-                <h3 style="color: var(--gold-accent); margin-bottom: 20px; font-family: var(--font-heading); font-size: 1.8rem;">Important Note Regarding Domains</h3>
-                <p style="margin-bottom: 20px; color: var(--text-main); font-size: 1.05rem;">Private custom domains (like <i>yourname.com</i>) cost extra fees charged by domain registrars. We can talk this out and find the best option for your budget.</p>
-                <p style="color: #D1CCC5; font-style: italic; font-size: 1rem;">🤝 <strong>Bonus:</strong> If you want, I can handle the full technical setup and ongoing maintenance of your website so you can focus purely on running your business.</p>
+            
+            <div class="info-box">
+                <h3>🚀 What You Get</h3>
+                <ul class="info-list check-list">
+                    <li>Clean & Professional Edits</li>
+                    <li>Optimized for Instagram / Reels</li>
+                    <li>Smooth & Engaging Flow</li>
+                    <li>High Quality Export</li>
+                    <li>One-time payment (no monthly)</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h3>🤝 Why Choose Me</h3>
+                <ul class="info-list check-list">
+                    <li>Affordable Pricing 💰</li>
+                    <li>Fast Delivery ⚡</li>
+                    <li>Understanding of Trends</li>
+                    <li>Simple & Direct Communication</li>
+                    <li>Edits made for engagement</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <section id="about" class="info-section">
-        <div class="info-box reveal">
-            <h3>🚀 What You Get</h3>
-            <ul>
-                <li>100% Mobile Friendly Website 📱</li>
-                <li>Fast Loading Speed ⚡</li>
-                <li>Clean & Professional Design</li>
-                <li>Easy Contact Options (Call / WhatsApp)</li>
-                <li>One-Time Payment (No monthly charges)</li>
-            </ul>
-        </div>
-        
-        <div class="info-box reveal">
-            <h3>🤝 Why Choose Me</h3>
-            <ul>
-                <li>Affordable Pricing (Local Friendly 💰)</li>
-                <li>Fast Delivery (1–3 Days)</li>
-                <li>Direct Communication (No confusion)</li>
-                <li>Custom Work for Your Business</li>
-                <li>Support even after delivery</li>
-            </ul>
-        </div>
-
-        <div class="info-box reveal">
-            <h3>📦 Delivery Method</h3>
-            <p style="color: var(--text-muted); margin-bottom: 20px;">Your website will be delivered safely via:</p>
-            <ul>
-                <li>WhatsApp 📲</li>
-                <li>Email 📧</li>
-                <li>Live Link (ready to use)</li>
-            </ul>
-            <p style="margin-top: 20px; color: var(--gold-accent); font-style: italic;">👉 You can check everything before making the final payment.</p>
-        </div>
-    </section>
-
-    <section id="contact" class="reveal">
-        <h2>Ready to Get Your Website?</h2>
-        <p>Message now and get your business online quickly and professionally.</p>
-        <div class="btn-group">
-            <a href="tel:+919699276734z" class="btn">Call Now</a>
-            <a href="https://wa.me/919699276734" class="btn" style="background: #128C7E; border-color: #128C7E; color: #fff;">WhatsApp Me</a>
-            <a href="#pricing" class="btn btn-outline">Choose a Plan</a>
+    <section>
+        <div id="contact" class="reveal">
+            <h2>Need Your Videos Edited?</h2>
+            <p>Send your clips and get a clean, engaging video ready to post. Preview available before final delivery.</p>
+            <div class="btn-group">
+                <a href="tel:+910000000000" class="btn">Send Clips</a>
+                <a href="https://wa.me/910000000000" class="btn btn-accent">WhatsApp Me</a>
+            </div>
         </div>
     </section>
 
     <footer>
-        <div class="footer-content reveal">
-            <div class="footer-logo">GAURAV WEB SERVICES</div>
-            
-            <div class="footer-links">
-                <a href="https://www.instagram.com/its_gauravxd/" target="_blank" class="icon-ig">Instagram</a>
-                <a href="https://wa.me/919699276734" target="_blank" class="icon-wa">WhatsApp Chat</a>
-                <a href="tel:+919699276734" class="icon-ph">Call Me</a>
-            </div>
+        <div class="footer-logo">GAURAV EDITS</div>
+        
+        <div class="social-icons">
+            <a href="tel:+910000000000" title="Call Us">
+                <svg viewBox="0 0 24 24">
+                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                </svg>
+            </a>
+            <a href="https://wa.me/910000000000" title="WhatsApp">
+                <svg viewBox="0 0 24 24">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+            </a>
+            <a href="mailto:your.email@example.com" title="Email Us">
+                <svg viewBox="0 0 24 24">
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+            </a>
+            <a href="https://instagram.com/your_handle" title="Instagram">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                </svg>
+            </a>
         </div>
         
         <div class="copyright">
-            <p>© 2026 Gaurav Web Services. All rights reserved. Elevated Digital Experiences.</p>
+            <p>Delivery via WhatsApp 📲 | Google Drive Link | Email 📧</p>
+            <br>
+            <p>© 2026 Gaurav Edits. All rights reserved. Video content elevated.</p>
         </div>
     </footer>
 
@@ -857,11 +637,11 @@
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add("active");
-                        observer.unobserve(entry.target); // Stop observing once revealed
+                        observer.unobserve(entry.target); 
                     }
                 });
             }, {
-                threshold: 0.15, // Trigger when 15% of the element is visible
+                threshold: 0.15,
                 rootMargin: "0px 0px -50px 0px"
             });
 

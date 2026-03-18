@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaurav Edits | Terms & Conditions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS Variables - Moody Dark Cream / Taupe Palette (ZERO White) */
+        :root {
+            --bg-main: #AFA596; /* Dark cream / Putty */
+            --bg-card: #BDB4A5; /* Slightly lighter dark cream for cards */
+            --bg-card-hover: #C5BDB0; 
+            --text-dark: #2C2825; /* Deep espresso/charcoal for readability */
+            --text-muted: #5E564E; /* Medium taupe for subtitles */
+            --accent-color: #8A5A46; /* Deep muted clay/terracotta */
+            --accent-glow: rgba(138, 90, 70, 0.3);
+
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Plus Jakarta Sans', sans-serif;
+            --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-dark);
+            font-family: var(--font-body);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+        }
+
+        /* Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: 0.8s all ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 5%;
+            text-align: center;
+            background: rgba(175, 165, 150, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(44, 40, 37, 0.1);
+            z-index: 1000;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            text-decoration: none;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Page Layout */
+        .container {
+            max-width: 900px;
+            margin: 140px auto 80px;
+            padding: 0 5%;
+        }
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .page-title h1 {
+            font-size: 3.5rem;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+        }
+
+        .page-title p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Terms List Grid */
+        .terms-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .term-card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 35px 40px;
+            border: 1px solid rgba(44, 40, 37, 0.05);
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .term-card:hover {
+            transform: translateX(10px);
+            background: var(--bg-card-hover);
+            border-left: 4px solid var(--accent-color);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        /* Faded background number effect */
+        .term-number {
+            position: absolute;
+            right: 20px;
+            top: -10px;
+            font-family: var(--font-heading);
+            font-size: 8rem;
+            color: rgba(44, 40, 37, 0.03);
+            font-weight: 700;
+            line-height: 1;
+            pointer-events: none;
+            transition: var(--transition);
+        }
+
+        .term-card:hover .term-number {
+            color: rgba(138, 90, 70, 0.08); /* Faint accent glow on hover */
+            transform: scale(1.1);
+        }
+
+        .term-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .term-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+        }
+
+        .term-content p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        /* Highlight Text */
+        .highlight {
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 14px 35px;
+            background-color: var(--text-dark);
+            color: var(--bg-main);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: 6px;
+            transition: var(--transition);
+            border: 2px solid var(--text-dark);
+            cursor: pointer;
+            text-align: center;
+            margin-top: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--text-dark);
+            box-shadow: 0 8px 20px rgba(44, 40, 37, 0.15);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(44, 40, 37, 0.1);
+            margin-top: 80px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .page-title h1 { font-size: 2.8rem; }
+            .term-card { padding: 30px 25px; }
+            .term-number { font-size: 6rem; right: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">GAURAV EDITS</a>
+    </header>
+
+    <div class="container">
+        
+        <div class="page-title reveal">
+            <h1>Terms & Policies</h1>
+            <p>To maintain a high standard of quality and mutual respect, all clients must agree to the following 10 binding conditions before the commencement of any video editing project.</p>
+        </div>
+
+        <div class="terms-grid">
+            
+            <div class="term-card reveal">
+                <div class="term-number">01</div>
+                <div class="term-content">
+                    <h3>Scope of Work & Packages</h3>
+                    <p>Services are strictly limited to the features outlined in your chosen package. Any requests for styling, effects, or tasks outside the boundaries of the selected tier will be billed separately as <span class="highlight">Add-Ons</span>. Free extra work is not provided under any circumstances.</p>
+                </div>
+            </div>
+
+            <div class="term-card reveal">
+                <div class="term-number">02</div>
+                <div class="term-content">
+                    <h3>The 40% Downpayment Rule</h3>
+                    <p>No project will be scheduled or started without a <span class="highlight">mandatory 40% upfront downpayment</span>. This secures your slot and acts as a commitment fee. The remaining 60% balance is strictly due upon the completion and approval of the project.</p>
+                </div>
+            </div>
+
+            <div class="term-card reveal">
+                <div class="term-number">03</div>
+                <div class="term-content">
+                    <h3>Watermarked Previews</h3>
+                    <p>Upon completion of the edit, you will receive a <span class="highlight">heavily watermarked preview</span> file for review. The clean, unwatermarked, high-resolution final file will only be released after the final 60% payment has been successfully cleared.</p>
+                </div>
+            </div>
+
+            <div class="term-card reveal">
+                <div class="term-number">04</div>
+                <div class="term-content">
+                    <h3>Revisions & Alterations</h3>
+                    <p>Minor adjustments (e.g., text typos, slight timing tweaks) are included. However, complete style changes, swapping background music after the edit is done, or replacing original raw clips with "new" ones will be treated as a <span class="highlight">new project</span> or incur a paid revision fee.</p>
+                </div>
+            </div>
+
+            <div class="term-card reveal">
+                <div class="term-number">05</div>
+                <div class="term-content">
+                    <h3>Client Responsibilities</h3>
+                    <p>Clients must provide all raw clips, audio, brand logos, and specific instructions <span class="highlight">before</span> editing begins. Files must be organized and shared via a working Google Drive link. Editing delays caused by disorganized or missing files are the client's responsibility.</p>
+                </div>
+            </div>
+
+            <div class="term-card reveal">
+                <div class="term-number">06</div>
+                <div class="term-content">
+                    <h3>Strict Add-On Billing</h3>
+                    <p>Features such as custom subtitles/captions (+₹100), custom post thumbnails (+₹100), or rush same-day delivery (+₹100) are <span class="highlight">not included</span> in base packages unless explicitly stated. You will be quoted and billed for these additions if requested.</p>
+                </div>
+            </div>
+
+            <div class="term-card reveal">
+                <div class="term-number">07</div>
+                <div class="term-content">
+                    <h3>Delivery Timelines</h3>
+                    <p>The estimated delivery timeline (e.g., 1-2 days) begins <span class="highlight">only after</span> the 40% downpayment is received AND all necessary files/instructions have been successfully downloaded from your drive link.</p>
+                </div>
+            </div>
+
+            <div class="term-card reveal">
+                <div class="term-number">08</div>
+                <div class="term-content">
+                    <h3>Cancellations & Refunds</h3>
+                    <p>If you choose to cancel a project after editing has officially commenced, the <span class="highlight">40% downpayment is non-refundable</span> to compensate for the time and labor already invested into your raw files.</p>
+                </div>
+            </div>
+
+            <div class="term-card reveal">
+                <div class="term-number">09</div>
+                <div class="term-content">
+                    <h3>Project Abandonment</h3>
+                    <p>If a watermarked preview is sent and the client fails to respond, request revisions, or clear the final payment within <span class="highlight">7 days</span>, the project will be considered abandoned. The final files will be archived, and a reactivation fee may apply to retrieve them.</p>
+                </div>
+            </div>
+
+            <div class="term-card reveal">
+                <div class="term-number">10</div>
+                <div class="term-content">
+                    <h3>Portfolio Usage Rights</h3>
+                    <p>Unless a strict Non-Disclosure Agreement (NDA) is requested and agreed upon beforehand, Gaurav Edits reserves the right to use short clips or screenshots of the final edited video for <span class="highlight">portfolio and promotional purposes</span> on social media.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="reveal" style="text-align: center;">
+            <a href="index.html" class="btn">Return to Home</a>
+        </div>
+
+    </div>
+
+    <div class="agreement-section" style="margin-top: 60px; background: var(--bg-card); padding: 40px; border-radius: 12px; text-align: center; border: 1px solid rgba(44, 40, 37, 0.1);">
+    
+    <h3 style="margin-bottom: 15px; color: var(--text-dark);">Required Agreement</h3>
+    
+    <p style="color: var(--text-muted); margin-bottom: 15px; font-size: 0.9rem;">
+        Please read all terms carefully. To proceed, type:
+    </p>
+
+    <p style="font-weight: 600; margin-bottom: 20px;">
+        <span class="highlight">I AGREE TO ALL TERMS</span>
+    </p>
+
+    <input type="text" id="agreeInput" placeholder="Type the phrase exactly..." 
+        style="padding: 12px; width: 100%; max-width: 300px; border-radius: 6px; border: 1px solid #ccc; margin-bottom: 20px;">
+
+    <br>
+
+    <a href="Client.html" id="proceedBtn" class="btn" style="opacity: 0.5; pointer-events: none;">
+        Proceed to Client Portal
+    </a>
+
+    <p id="waitMsg" style="margin-top: 15px; font-size: 0.8rem; color: var(--text-muted);">
+        ⏳ Please spend some time reading before proceeding...
+    </p>
+
+</div>
+
+    </div> 
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const checkbox = document.getElementById("agreeCheckbox");
+            const label = document.getElementById("agreeLabel");
+            const proceedBtn = document.getElementById("proceedBtn");
+            let hasScrolledToBottom = false;
+
+            // Detect when user scrolls near the bottom of the page
+            window.addEventListener("scroll", function() {
+                // If they scroll within 300px of the bottom of the page
+                if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 300) {
+                    if (!hasScrolledToBottom) {
+                        hasScrolledToBottom = true;
+                        checkbox.disabled = false;
+                        checkbox.style.cursor = "pointer";
+                        label.style.cursor = "pointer";
+                        label.style.color = "var(--text-dark)";
+                    }
+                }
+            });
+
+            // Enable button when checkbox is clicked
+            checkbox.addEventListener("change", function() {
+                if (this.checked) {
+                    proceedBtn.style.opacity = "1";
+                    proceedBtn.style.pointerEvents = "auto";
+                } else {
+                    proceedBtn.style.opacity = "0.5";
+                    proceedBtn.style.pointerEvents = "none";
+                }
+            });
+
+            // Save agreement and go to portal
+            proceedBtn.addEventListener("click", function(e) {
+                e.preventDefault();
+                // Save a temporary token in their browser memory
+                localStorage.setItem("gauravEditsAgreed", "True - Verified by Scroll");
+                // Redirect to your portal page (make sure the filename matches!)
+                window.location.href = "Client.html"; 
+            });
+        });
+    </script>
+
+    <footer>
+        <p>Your payment acts as a digital signature of agreement to these Terms & Conditions.</p>
+        <p style="margin-top: 10px;">© 2026 Gaurav Edits. Legal & Policy Standards.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const reveals = document.querySelectorAll(".reveal");
+
+            const revealOnScroll = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                        observer.unobserve(entry.target); 
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            });
+
+            reveals.forEach(reveal => {
+                revealOnScroll.observe(reveal);
+            });
+        });
+    </script>
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    const input = document.getElementById("agreeInput");
+    const proceedBtn = document.getElementById("proceedBtn");
+    const waitMsg = document.getElementById("waitMsg");
+
+    let hasScrolled = false;
+    let timePassed = false;
+
+    // ⏳ Minimum reading time (20 seconds)
+    setTimeout(() => {
+        timePassed = true;
+        waitMsg.textContent = "✅ You may proceed once all conditions are met.";
+    }, 20000);
+
+    // 📜 Scroll detection
+    window.addEventListener("scroll", function() {
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 200) {
+            hasScrolled = true;
+        }
+    });
+
+    // ✍️ Input verification
+    input.addEventListener("input", function() {
+        const correctPhrase = "I AGREE TO ALL TERMS";
+
+        if (
+            this.value.trim() === correctPhrase &&
+            hasScrolled &&
+            timePassed
+        ) {
+            proceedBtn.style.opacity = "1";
+            proceedBtn.style.pointerEvents = "auto";
+        } else {
+            proceedBtn.style.opacity = "0.5";
+            proceedBtn.style.pointerEvents = "none";
+        }
+    });
+
+    // 💾 Save agreement
+    proceedBtn.addEventListener("click", function(e) {
+        e.preventDefault();
+        localStorage.setItem("gauravEditsAgreed", "True - Verified by Intent");
+        window.location.href = "Client.html";
+    });
+});
+</script>
+</body>
+</html>

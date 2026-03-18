@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaurav Edits | Client Guidelines</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS Variables - Moody Dark Cream / Taupe Palette (ZERO White) */
+        :root {
+            --bg-main: #AFA596; /* Dark cream / Putty */
+            --bg-card: #BDB4A5; /* Slightly lighter dark cream for cards */
+            --bg-card-hover: #C5BDB0; 
+            --text-dark: #2C2825; /* Deep espresso/charcoal for readability */
+            --text-muted: #5E564E; /* Medium taupe for subtitles */
+            --accent-color: #8A5A46; /* Deep muted clay/terracotta */
+            --accent-glow: rgba(138, 90, 70, 0.3);
+            --warning-bg: #AA988C; /* Muted reddish-taupe for warning boxes */
+            --warning-border: #7A4231; /* Darker clay for borders */
+
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Plus Jakarta Sans', sans-serif;
+            --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-dark);
+            font-family: var(--font-body);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+        }
+
+        /* Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: 0.8s all ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 5%;
+            text-align: center;
+            background: rgba(175, 165, 150, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(44, 40, 37, 0.1);
+            z-index: 1000;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            text-decoration: none;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Page Layout */
+        .container {
+            max-width: 900px;
+            margin: 140px auto 80px;
+            padding: 0 5%;
+        }
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .page-title h1 {
+            font-size: 3.5rem;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+        }
+
+        .page-title p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Instruction Cards */
+        .step-card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(44, 40, 37, 0.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            transition: var(--transition);
+            display: flex;
+            gap: 25px;
+            align-items: flex-start;
+        }
+
+        .step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.06);
+            background: var(--bg-card-hover);
+        }
+
+        .step-number {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            color: var(--accent-color);
+            line-height: 1;
+            opacity: 0.8;
+        }
+
+        .step-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .step-content p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        /* IMPORTANT: Warnings & Policies */
+        .policy-section {
+            margin-top: 60px;
+        }
+
+        .warning-box {
+            background: var(--warning-bg);
+            border-left: 6px solid var(--warning-border);
+            padding: 35px 40px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 20px rgba(122, 66, 49, 0.1);
+        }
+
+        .warning-box h3 {
+            color: var(--text-dark);
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .warning-box h3::before {
+            content: '⚠️';
+            margin-right: 15px;
+            font-size: 1.4rem;
+        }
+
+        .warning-box p {
+            color: #3D3530; /* Very dark taupe */
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .warning-box ul {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .warning-box ul li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            color: #3D3530;
+            font-weight: 600;
+        }
+
+        .warning-box ul li::before {
+            content: '🚫';
+            margin-right: 12px;
+            font-size: 1rem;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 14px 35px;
+            background-color: var(--text-dark);
+            color: var(--bg-main);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: 6px;
+            transition: var(--transition);
+            border: 2px solid var(--text-dark);
+            cursor: pointer;
+            text-align: center;
+            width: 100%;
+            margin-top: 40px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--text-dark);
+            box-shadow: 0 8px 20px rgba(44, 40, 37, 0.15);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(44, 40, 37, 0.1);
+            margin-top: 60px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .page-title h1 { font-size: 2.8rem; }
+            .step-card { flex-direction: column; gap: 15px; padding: 30px; }
+            .warning-box { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">GAURAV EDITS</a>
+    </header>
+
+    <div class="container">
+        
+        <div class="page-title reveal">
+            <h1>Client Guidelines</h1>
+            <p>Please read through the process and policies below before we begin working on your project. This ensures a smooth, professional, and fast editing experience for both of us.</p>
+        </div>
+
+        <div class="step-card reveal">
+            <div class="step-number">01</div>
+            <div class="step-content">
+                <h3>Submit Your Files</h3>
+                <p>Upload your raw video clips, audio, and any specific brand assets to a Google Drive folder and share the link with me. Please make sure the link access is set to "Anyone with the link".</p>
+            </div>
+        </div>
+
+        <div class="step-card reveal" style="border-left: 4px solid var(--accent-color);">
+            <div class="step-number" style="color: var(--accent-color);">02</div>
+            <div class="step-content">
+                <h3>The 40% Downpayment</h3>
+                <p><strong>Work will not begin until a 40% upfront downpayment is received.</strong> This secures your spot in my editing schedule and acts as a commitment fee. The remaining 60% is strictly due upon project completion.</p>
+            </div>
+        </div>
+
+        <div class="step-card reveal">
+            <div class="step-number">03</div>
+            <div class="step-content">
+                <h3>Editing & Watermarked Review</h3>
+                <p>I will edit your video based on the package you selected. Once finished, I will send you a heavily watermarked version for your review. You can check the flow, transitions, and timing.</p>
+            </div>
+        </div>
+
+        <div class="step-card reveal">
+            <div class="step-content" style="width: 100%;">
+                <h3 style="display: flex; align-items: center; gap: 15px;">
+                    <span class="step-number" style="font-size: 2rem;">04</span> 
+                    Final Delivery
+                </h3>
+                <p>Once you are happy with the preview, you will clear the remaining 60% balance. After payment is confirmed, I will immediately send you the final, high-quality, unwatermarked HD video file.</p>
+            </div>
+        </div>
+
+        <div class="policy-section">
+            
+            <div class="warning-box reveal">
+                <h3>Strict Add-On Policy</h3>
+                <p>To keep my pricing affordable and fair, my packages are strictly limited to the features listed. Any extra requests outside of your chosen package will be billed as Add-Ons.</p>
+                <p style="color: var(--warning-border); font-style: italic;">I value my time and yours. Please do not ask for free extra work during or after the edit.</p>
+                <ul>
+                    <li>Subtitles / Full Captions (+₹100)</li>
+                    <li>Custom Thumbnails (+₹100)</li>
+                    <li>Extra Revisions beyond the package limit (+₹50)</li>
+                    <li>Same-Day Fast Delivery Rush Fee (+₹100)</li>
+                </ul>
+            </div>
+
+            <div class="warning-box reveal" style="background: var(--bg-card); border-left-color: var(--text-dark);">
+                <h3 style="color: var(--text-dark);">Revisions & Changes</h3>
+                <p>Your package includes a specific set of basic revisions (fixing errors, slight timing changes). Complete style changes, changing the background music after the edit is done, or sending "new clips" to replace old ones will count as a brand new edit or require a paid revision fee.</p>
+            </div>
+
+        </div>
+
+        <div class="reveal">
+    <a href="policy.html" class="btn" onclick="markGuideRead()">I Understand — View Policies</a>
+</div>
+
+<script>
+    function markGuideRead() {
+        localStorage.setItem("gauravVisitedGuide", "true");
+    }
+</script>
+
+    </div>
+
+    <footer>
+        <p>By proceeding with a payment, you agree to the terms and workflow stated above.</p>
+        <p style="margin-top: 10px;">© 2026 Gaurav Edits. Professional Standards Maintained.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const reveals = document.querySelectorAll(".reveal");
+
+            const revealOnScroll = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                        observer.unobserve(entry.target); 
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            });
+
+            reveals.forEach(reveal => {
+                revealOnScroll.observe(reveal);
+            });
+        });
+    </script>
+</body>
+</html>

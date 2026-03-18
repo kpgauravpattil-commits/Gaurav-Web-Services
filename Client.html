@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // The Bouncer: Check if they agreed to the terms
+        if (localStorage.getItem("gauravEditsAgreed") !== "True - Verified by Intent") {
+            alert("Security Check: You must read and agree to the Terms & Conditions before placing an order.");
+            window.location.href = "policy.html"; // Kick them back to terms
+        }
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaurav Edits | Client Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-main: #AFA596; 
+            --bg-card: #BDB4A5; 
+            --text-dark: #2C2825; 
+            --text-muted: #5E564E; 
+            --accent-color: #8A5A46; 
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Plus Jakarta Sans', sans-serif;
+            --transition: all 0.4s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-dark);
+            font-family: var(--font-body);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .portal-container {
+            background: var(--bg-card);
+            max-width: 500px;
+            width: 100%;
+            padding: 50px 40px;
+            border-radius: 12px;
+            border: 1px solid rgba(44, 40, 37, 0.08);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 14px 16px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(44, 40, 37, 0.15);
+            border-radius: 6px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            color: var(--text-dark);
+            transition: var(--transition);
+            outline: none;
+        }
+
+        .form-control:focus {
+            border-color: var(--accent-color);
+            background: rgba(255, 255, 255, 0.4);
+            box-shadow: 0 0 0 3px rgba(138, 90, 70, 0.1);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        select.form-control {
+            appearance: none;
+            cursor: pointer;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 16px;
+            background-color: var(--text-dark);
+            color: var(--bg-main);
+            border: none;
+            border-radius: 6px;
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-top: 10px;
+        }
+
+        .btn-submit:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(138, 90, 70, 0.2);
+        }
+
+        /* Success Message styling */
+        #success-msg {
+            display: none;
+            text-align: center;
+            background: #8A5A46;
+            color: #fff;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 20px;
+            font-weight: 500;
+        }
+
+        .disclaimer {
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 25px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="portal-container">
+        <div class="header">
+            <h1>Client Portal</h1>
+            <p>Securely log your project details below.</p>
+        </div>
+
+        <form id="orderForm" method="POST" action="https://script.google.com/macros/s/AKfycbzFxFd-jjnbXcrXvEwF6Iylkn_AUj3kmOF4C8Bm0Nu_qRT5rsjI1deciH6WHLuu07H-Dw/exec">
+
+            <input type="hidden" id="tnc_agreed" name="tnc_agreed" value="Yes - Verified">
+            
+            <div class="form-group">
+                <label for="username">Client Name / Instagram Handle</label>
+                <input type="text" id="username" name="username" class="form-control" placeholder="e.g., @your_handle or John Doe" required>
+            </div>
+
+            <div class="form-group">
+                <label for="package">Select Package</label>
+                <select id="package" name="package" class="form-control" required>
+                    <option value="" disabled selected>Choose your edit tier...</option>
+                    <option value="Basic Edit (199)">Basic Edit - ₹199</option>
+                    <option value="Starter Edit (299)">Starter Edit - ₹299</option>
+                    <option value="Pro Edit (499)">Pro Edit - ₹499 (Most Popular)</option>
+                    <option value="Advanced Edit (699)">Advanced Edit - ₹699</option>
+                    <option value="Premium Edit (999)">Premium Edit - ₹999</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="drive_link">Google Drive Link (Raw Files)</label>
+                <input type="url" id="drive_link" name="drive_link" class="form-control" placeholder="Paste your open drive link here" required>
+            </div>
+
+            <div class="form-group">
+                <label for="notes">Extra Notes / Add-ons</label>
+                <textarea id="notes" name="notes" class="form-control" placeholder="Describe your vision or specify add-ons (Subtitles, Fast Delivery, etc.)"></textarea>
+            </div>
+
+            <input type="hidden" id="timestamp" name="timestamp" value="">
+
+            <button type="submit" class="btn-submit" id="submitBtn">Submit Order Log</button>
+            
+            <div id="success-msg">Your order has been logged securely. I will contact you shortly!</div>
+        </form>
+
+        <div class="disclaimer">
+            <p>🔒 Privacy Guard: No passwords or sensitive financial data are collected on this page.</p>
+        </div>
+    </div>
+
+    <script>
+        // Set the hidden timestamp to the exact time they submit
+        document.getElementById('orderForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Stop normal redirect
+            
+            const btn = document.getElementById('submitBtn');
+            const msg = document.getElementById('success-msg');
+            const form = this;
+
+            // Set current time
+            document.getElementById('timestamp').value = new Date().toLocaleString();
+
+            btn.textContent = "Logging securely...";
+            btn.style.opacity = "0.7";
+
+            // Submit data to Google Script in background
+            fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form)
+            }).then(response => {
+                btn.style.display = 'none'; // Hide button
+                msg.style.display = 'block'; // Show success message
+                form.reset(); // Clear the form
+            }).catch(error => {
+                btn.textContent = "Submit Order Log";
+                btn.style.opacity = "1";
+                alert("Something went wrong. Please try again or contact me directly.");
+            });
+        });
+    </script>
+</body>
+</html>
